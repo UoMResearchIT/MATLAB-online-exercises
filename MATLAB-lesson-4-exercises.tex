@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+
+\usepackage{matlab-prettifier}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumerate}
+
+\title{MATLAB lesson 4: Graphics\\Exercise sheet}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Based on the lesson}
+{\large These exercises can be completed using information found in the lesson}
+
+\begin{enumerate}
+	\item Basic x-y plot
+	\begin{enumerate}
+		\item Create an array x, with values 1 to 10
+		\item Create an array y, containing 10 random numbers
+		\item Plot y against x
+		\item Close the figure	
+	\end{enumerate}
+	
+	\item Customise lines and markers
+	
+	Recreate the same y vs x plot but:
+	\begin{enumerate}
+		
+		\item Set the line width to 2 and set the line style to dashed
+		\item Set the marker style to circles and set the marker size to 8
+	\end{enumerate}
+
+	\item Set axis range
+	\begin{enumerate}
+	
+		\item Set the x-axis range to 2-8, and the y-axis range to 0.2-0.8	
+		\item Set the x-range back to 0-10
+		\item Return both axis ranges to the default values
+	\end{enumerate}
+	
+	\item Turn the grid on
+	\item Clear the figure window (without closing it)
+	\item Plot y vs x on log-log axes
+	
+	\item Make your figure intelligible to others
+	\begin{enumerate}
+		\item Give your figure a title
+		\item Label the x and y axes
+		\item Add a legend in the bottom right corner
+	\end{enumerate}
+	
+	\item Sub-plots
+	\begin{enumerate}
+		\item Create an array y1, equal to x squared
+		\item Create an array y2, equal to x cubed
+		\item Create a figure window
+		\item Using a 2*2 tiling pattern, create subplots for y vs x (top left), y1 vs x (top right) and y2 vs x (full width of bottom row). 
+	\end{enumerate}
+	
+	\item Surface plot
+	
+	Using the \texttt{peaks(500)} function, create a surface plot 
+
+	\item Bar chart with sub-plot
+	\begin{enumerate}
+		\item Use the \texttt{rand} function to create a matrix with 3 row and 4 columns of data
+		\item Display the data as a bar chart and a stacked bar chart, together in the 	same figure window
+	\end{enumerate}
+	
+	\item Save (hint: print) the figure from the previous question as a png image file
+	
+	\item Save the current figure as a figure file which can be loaded back into MATLAB
+
+	
+\end{enumerate}
+
+\medskip
+
+\section{Using the MATLAB documentation}
+{\large These exercises require information from the MATLAB help files}
+	\begin{enumerate}
+		\item Open the figure from the previous question in MATLAB
+		
+		\item Image plot
+		
+		Using the \texttt{peaks(500)} function, create an image plot with the colours scaled to represent the values of the matrix.\\
+		(hint: read about `CDataMapping' on the image plot help page)	
+	\end{enumerate}
+
+\end{document}

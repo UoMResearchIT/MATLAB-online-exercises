@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+
+\usepackage{matlab-prettifier}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumerate}
+
+\title{MATLAB lesson 4: Graphics\\Solutions to exercises}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section{Based on the lesson}
+
+\begin{enumerate}
+	\item Basic x-y plot
+	\begin{enumerate}
+		\item x=1:10 or x=linspace(1,10,1)
+		\item y=rand(1,10)
+		\item plot(x,y)
+		\item close
+	\end{enumerate}
+	
+	\item Customise lines and markers
+	
+	\lstinline[style=Matlab-editor]!plot(x,y,'--o','LineWidth',2,'MarkerSize',8)!
+	
+	\item Set axis range
+	\begin{enumerate}
+	
+		\item \lstinline[style=Matlab-editor]!axis([2,8,0.2,0.8])!
+		\item \lstinline[style=Matlab-editor]!xlim([0,10])!
+		\item axis auto
+	\end{enumerate}
+	
+	\item grid on
+	\item clf
+	\item loglog(x,y)
+	
+	\item Make your figure intelligible to others
+	\begin{enumerate}
+		\item 	\lstinline[style=Matlab-editor]!title('2d plot of random numbers')!
+		\item 	\lstinline[style=Matlab-editor]!ylabel('y-values')!
+		\item 	\lstinline[style=Matlab-editor]!xlabel('x-values')!
+		\item 	\lstinline[style=Matlab-editor]!legend('random numbers','Location','SouthEast')!
+	\end{enumerate}
+	
+	\item Sub-plots
+	
+		\begin{lstlisting}[style=Matlab-editor]
+figure
+subplot(2,2,1)
+plot(x,y)	
+subplot(2,2,2)
+plot(x,y1)		
+subplot(2,2,[3,4])
+plot(x,y2)
+		\end{lstlisting}
+			
+	
+	\item \lstinline[style=Matlab-editor]!surf(peaks(500))!
+	
+	\item Bar chart with sub-plot
+
+	\begin{enumerate}
+		\item rdata=rand(3,4)
+		\item 	
+\begin{lstlisting}[style=Matlab-editor]
+figure
+subplot(1,2,1)
+bar(rdata)
+subplot(1,2,2)
+bar(rdata,'stacked')
+\end{lstlisting}
+	\end{enumerate}
+	
+	\item \lstinline[style=Matlab-editor]!print('myfigure','-dpng')!
+	
+	\item \lstinline[style=Matlab-editor]!saveas(gcf,'BarChart','fig')!
+
+\end{enumerate}
+
+\medskip
+
+\section{Using the MATLAB documentation}
+	\begin{enumerate}
+		\item \lstinline[style=Matlab-editor]!open('BarChart.fig')!	
+		\item \lstinline[style=Matlab-editor]!image(peaks(500),'CDataMapping','scaled')!
+	\end{enumerate}
+\end{document}\textsl{}
