@@ -1,0 +1,46 @@
+\documentclass[a4paper]{article}
+
+\usepackage{matlab-prettifier}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumerate}
+
+\title{MATLAB lesson 3: Matrices\\Solutions to exercises}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Based on the lesson}
+
+\begin{enumerate}
+% Easy
+	\item \lstinline[style=Matlab-editor]!a=ones(2,3)!
+	\item \lstinline[style=Matlab-editor]!b=rand(4,3)!
+	\item \lstinline[style=Matlab-editor]!c=zeros(10)!
+	\item \lstinline[style=Matlab-editor]!c(3,4)=4!
+	\item \lstinline[style=Matlab-editor]!c(2,:)=2!
+	\item \lstinline[style=Matlab-editor]!c(5:7,6:8)=6!
+	\item \lstinline[style=Matlab-editor]!c(:)=3 or c(:,:)=3!
+	\item \lstinline[style=Matlab-editor]!c^2! or \lstinline[style=Matlab-editor]!c*c!
+	\item \lstinline[style=Matlab-editor]!c.^2! or \lstinline[style=Matlab-editor]!c.*2!
+	\item \lstinline[style=Matlab-editor]!c/3!
+	\item \lstinline[style=Matlab-editor]!m=magic(4)!
+	\item \lstinline[style=Matlab-editor]!min(min(m))!
+	\item \lstinline[style=Matlab-editor]![1,2,3;4,5,6;7,8,9]!
+\end{enumerate}
+
+\medskip
+
+\section{Using the MATLAB documentation}
+
+	\begin{enumerate}
+		% Medium	
+			\item \lstinline[style=Matlab-editor]![min_val,min_index]=min(m(:));[index_row,index_col]=ind2sub(size(m),min_index)!
+		% Hard	
+			\item \lstinline[style=Matlab-editor]!a=rand(500,1)!
+			\item \lstinline[style=Matlab-editor]!any(a>0.5), any(a>0.9), any(a>0.99)!
+			\item \lstinline[style=Matlab-editor]!indices=find(a>0.99)!
+			\item \lstinline[style=Matlab-editor]!all(a>0.5), all(a>0.1), all(a>0.01)!
+	\end{enumerate}
+\end{document}

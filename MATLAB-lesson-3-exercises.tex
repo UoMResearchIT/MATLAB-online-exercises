@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+
+\usepackage{matlab-prettifier}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumerate}
+
+\title{MATLAB lesson 3: Matrices\\Exercise sheet}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Based on the lesson}
+{\large These exercises are designed to test your understanding of the lesson content and can be completed by referring to the material in the lesson.}
+\begin{enumerate}
+	\item Create a matrix \textbf{a}, which is a 2*3 matrix (two rows, three columns) of ones
+	\item Create a 4*3 matrix \textbf{b}, of uniformly distributed random numbers
+	\item Create a 10*10 matrix \textbf{c}, of zeros
+	\item Set row 3, column 4 of matrix \textbf{c} equal to 4
+	\item Set row 2 equal to 5
+	\item Set rows 5 to 7 between columns 6 and 8 equal to 6
+	\item Set all elements of matrix c equal to 3
+	\item Calculate the matrix-square of \textbf{c}, i.e. the matrix product of \textbf{c}*\textbf{c}
+	\item Calculate the elementwise square of matrix c
+	\item Divide every element in array \textbf{c} by 3
+	\item Create a 4*4 magic array, \textbf{m}
+	\item Find the minimum value of \textbf{m}
+	\item Create the following matrix:
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{ccc}
+				1 & 2 & 3\\
+				4 & 5 & 6\\
+				7 & 8 & 9\\
+			\end{tabular}
+		\end{table}	
+\end{enumerate}
+
+\pagebreak
+
+\section{Using the MATLAB documentation}
+{\large This section will require you to search within the MATLAB help}
+
+	\begin{enumerate}
+	% Medium		
+		\item  Find the indices of the minimum value of matrix \textbf{m} you previously created (consult the documentation for \texttt{min}).
+	% Difficult	
+		For example, if the minimum value is in row 2, column 3, their indices are (2,3).
+		
+		\item Create an array of random numbers with 500 rows and 1 column
+		\item Test if any values are greater than 0.5, 0.9, 0.99.
+		\item Find the indices where values are greater than 0.99
+		\item Find if all values are greater than 0.5, 0.1 and 0.01
+	\end{enumerate}
+\end{document}
