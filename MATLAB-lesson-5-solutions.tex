@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{fullpage} % Less line-wrapping of code
+%\usepackage{lmodern}	% Use lmodern font to get the correct display of tilde character for ~=
+%\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+
+\title{MATLAB lesson 5: Programming\\Solutions to exercises}
+\date{}
+\author{} %{Dr. Gerard Capes}
+
+\usepackage{matlab-prettifier}
+
+\begin{document}
+	\maketitle
+	
+	\section{Logical operators}
+	\subsection*{Based on the lesson}
+		\begin{enumerate}
+			\setcounter{enumi}{2}
+			\item \lstinputlisting[style=Matlab-editor]{q1_3.m}
+			\item 
+			\begin{itemize}
+				\item Create a new script using the \texttt{new script} button on the \texttt{home} tab, or using the keyboard shortcut ctrl+N
+				\item Type commands into the script window, then save the script, chosing a descriptive name (something which reflects what the script does)
+				\item Make sure the file extension is \texttt{.m} 
+				\item You can then run the script by typing the name of the script (without the \texttt{.m} extension), clicking the \texttt{run} button on the \texttt{editor} tab, or pressing \texttt{F5}.
+			\end{itemize}
+		\end{enumerate}
+	\subsection*{Using MATLAB's help}
+	\begin{enumerate}[resume]
+		\item \lstinputlisting[style=Matlab-editor]{q1_5.m}
+		
+		\item \lstinputlisting[style=Matlab-editor]{q1_6.m}
+		
+		\item \lstinputlisting[style=Matlab-editor]{q1_7.m}
+	\end{enumerate}
+	
+	\section{Flow control}
+	\subsection*{Based on the lesson}
+	\begin{enumerate}
+		\item \lstinputlisting[style=Matlab-editor]{q2_1.m}
+		
+		\item \lstinputlisting[style=Matlab-editor]{q2_2.m}
+		
+		\item \lstinputlisting[style=Matlab-editor]{q2_3.m}
+		
+		\item In a \texttt{switch}, each \texttt{case} is looking for a match (i.e. testing the switch variable for a match to the value in each \texttt{case}). When testing an expression, you should use an \texttt{if} instead. A \texttt{switch} is best reserved for cases when you expect the result to be one of a discrete (non-continuous) series of values.
+		
+		\item \lstinputlisting[style=Matlab-editor]{q2_5.m}
+		
+		\item \lstinputlisting[style=Matlab-editor]{q2_6.m}
+		
+		\item Generally speaking, you should use a \texttt{for} loop when you know in advance how many iterations you will require. If you don't know how many iterations you will need, you can use a \texttt{while} loop to iterate for as long as a condition remains true.
+		
+		\item \lstinputlisting[style=Matlab-editor]{q2_8.m}	
+		
+		\item \lstinputlisting[style=Matlab-editor]{q2_9.m}	
+		
+		\item Using a for loop
+		\lstinputlisting[style=Matlab-editor]{q2_10_for.m}
+		
+		Using a while loop
+		\lstinputlisting[style=Matlab-editor]{q2_10_while.m}
+	\end{enumerate}
+	
+\end{document}

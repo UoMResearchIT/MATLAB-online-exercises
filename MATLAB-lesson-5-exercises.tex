@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\usepackage{lmodern}	% Use lmodern font to get the correct display of tilde character for ~=
+\usepackage[T1]{fontenc}
+%\usepackage{enumerate}
+\usepackage{enumitem}
+
+\title{MATLAB lesson 5: Programming\\Exercise sheet}
+\date{}
+\author{} %{Dr. Gerard Capes}
+
+\begin{document}
+	\maketitle
+	
+	\section{Logical operators}
+	\subsection*{Based on the lesson}
+	\begin{enumerate}
+		\item Run the tests \texttt{a<b}, \texttt{a>=b}, \texttt{a==b}, and \texttt{a\textasciitilde=b} for the following values of \texttt{a} and \texttt{b}:
+		
+		\begin{enumerate}
+			\item a=1, b=1
+			\item a=1, b=2
+			\item a=1, b=inf
+		\end{enumerate}
+		Make sure you understand the result.
+		\item For \texttt{a=1}, \texttt{b=1}, \texttt{c=0}, test the following and make sure you understand the results:
+		\begin{enumerate}
+			\item \texttt{(b | c) \& (a < 2)}
+			\item \texttt{(a < b) | (b > c)}
+			\item \texttt{(a \& b) \& c}
+		\end{enumerate}	
+		\item Generate a 500 by 1 array (i.e. 500 rows, 1 column) of random values and test if any values are greater than 0.5 (hint: \texttt{rand}, \texttt{any}).
+	\end{enumerate}	
+	\subsection*{Also requires some use of MATLAB's help}	
+		\begin{enumerate}[resume]
+		\item Use the MATLAB help to find out how to write a run a script (hint: \texttt{doc Programming Scripts and Functions}). 
+		\item Write a script that generates a 500 by 1 array (i.e. 500 rows, 1 column) of random values (use \texttt{rand}) and does the following:
+		\label{q:findarrayindices}
+		\begin{enumerate}
+			\item Tests if any values are greater than 0.5, 0.9, 0.99
+			\item Finds the indices where values are greater than 0.99
+			\item Finds if all values are greater than 0.5, 0.1 and 0.01
+			\item Sets the values which are greater than 0.99 equal to 1
+		\end{enumerate}
+		\item Repeat question \ref{q:findarrayindices} for a 10 by 10 matrix of random values
+		For each test use the \texttt{disp} function to output sensible text.
+		\item Write a script which creates two 5*5 matrices, \texttt{r1} and \texttt{r2}, each filled with random numbers.
+		\begin{enumerate}
+			\item Test which of the values in \texttt{r}1 are greater than their counterparts in \texttt{r2}.
+			\item Test which the values in \texttt{r1} are greater than 0.5, 0.9, 0.99. 
+			Your tests should return a 5*5 matrix of logical values.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\section{Flow control}
+	\label{sec:flowcontrol}
+	\subsection*{Based on the lesson}
+	\begin{enumerate}
+		\item Create a variable \texttt{x} and assign it a value.
+		\label{q:ifelse}
+		\begin{enumerate}
+			\item Write a script that uses an \texttt{if} statement to test whether the variable \texttt{x} has a value in the range $1<x<2$. The script should output a suitable message if it is (use \texttt{disp}).
+			\item Modify your script using an \texttt{elseif} to also test if \texttt{x} is less than or equal to 1. Your script should output a suitable message if so.
+			\item Add a further test which outputs suitable text when neither of the above conditions are met.
+			\item Change the value of \texttt{x} and re-run your script to test whether it works correctly for each condition.
+		\end{enumerate}
+		\item 
+		\label{q:ifclass}
+		\begin{enumerate}
+			\item Write a script that uses an if statement to test whether the class of a variable \texttt{x} is a double (use the \texttt{isa} function). The script should output a suitable message if it is (use \texttt{disp}).
+			\item Modify your script using an \texttt{elseif} to also test for \texttt{char} and \texttt{logical} classes. Your script should output suitable message if \texttt{x} is any of these classes.
+			\item Modify your script to output the message ``Unknown class'' when the class of \texttt{A} is none of the above (e.g. \texttt{single}, \texttt{int8}).
+			\item Test your script by changing the class of \texttt{x} and re-running the script.
+		\end{enumerate}
+		\item Write a new script that answers question \ref{sec:flowcontrol}.\ref{q:ifclass} using the \texttt{switch} construct instead of \texttt{if}.
+		\item Consider why the solution to question \ref{sec:flowcontrol}.\ref{q:ifelse} does not lend itself to being rewritten using a \texttt{switch} statement. When would you use a \texttt{switch} statement instead of a series of \texttt{if}, \texttt{elseif}, \texttt{else} statements?
+		\item
+		\begin{enumerate}
+			\item In a new script write a \texttt{for} loop that counts from 1 to 10. The script should output the value of the loop counter (to the screen) for each loop iteration.
+			\item Add a nested loop within the first loop that counts from 10 to 1.
+			\item Modify your code so both loops terminate when the loop counters are equal.
+		\end{enumerate}		
+		\item Write a while loop that repeatedly multiplies a variable \texttt{B} by 10 until \texttt{B} equals \texttt{inf}. If \texttt{B} is initially 1, how many loop iterations are required before the loop terminates?
+	\end{enumerate}
+	\subsection*{Requires some use of MATLAB's help}
+	\begin{enumerate}[resume]
+		\item Consider when you would use a while loop instead of a for loop (and vice-versa). Read the MATLAB help documentation if you're unsure (\texttt{doc for} and \texttt{doc while})
+		\item Write a \texttt{for} loop which loops from 1 to 100 in steps of 1.
+		\begin{enumerate}
+			\item If the loop counter is divisible by both 5 and 7 (i.e. the answer is an integer), output suitable text to the screen. (hint: use the \texttt{mod} function and \texttt{fprintf})
+			\item Count how many times the above condition is met and output the result
+		\end{enumerate}
+		\item Write a while loop which calculates the first 10 numbers which are divisible by 3, 4 and 5. From within your loop, output sensible text to the screen for each number which meets all these criteria.
+		\item
+		\begin{enumerate}
+			\item  Write a script which requests the user to input a number, then uses a loop to test whether this is a prime number. You should output some text to indicate the result, and if the number is not prime, indicate by which number is it divisible. (hints: \texttt{fprintf}, \texttt{input})
+			\item Make your code more robust by checking that the user input is
+			\begin{enumerate}
+				\item an integer
+				\item greater than 1
+			\end{enumerate}
+			and halting execution with a helpful error message if the input is invalid (hint: \texttt{assert} that these conditions are true)
+		\end{enumerate}
+	\end{enumerate}
+\end{document}
