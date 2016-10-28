@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage{lmodern}	% Use lmodern font to get the correct display of tilde character for ~=
+\usepackage[T1]{fontenc}
+%\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+}
+%\usepackage{matlab-prettifier}
+
+\title{MATLAB lesson 6: m-files\\Exercise sheet}
+\date{}
+\author{} %{Dr. Gerard Capes}
+
+\begin{document}
+	\maketitle
+	
+	\section{Scripts and function}
+	\subsection*{Based on the lesson}
+	\begin{enumerate}
+		\item Basic script
+		\label{q:basicscript}
+		\begin{enumerate}
+			\item Clear all variables in your workspace
+			\item Create two variables \texttt{a = 2} and \texttt{b = 3}
+			\item Write a script which multiplies these variables together and saves the result in a variable, \texttt{c}
+			\item Save your script using a suitable name. Check that this name is not already in use by another m-file or MATLAB function.	
+			\item Run your script, and note that the variable \texttt{c} remains in the current workspace after the script has finished
+		\end{enumerate}
+		\item Convert script to function one part at a time
+		\begin{enumerate}
+			\item Modify the (one-line) script from question \ref{q:basicscript} by adding the \texttt{function} keyword, then the name of the function on line 1 (give your function a suitable name). On line 3 add the \texttt{end} keyword
+			\item Run your function. Why doesn't it work? (Look at the error message in the command window for clues. Refer back to the lesson on function m-files and think about variable scope.)
+			\item Modify the function so that it takes two input arguments
+			\item Confirm that your function runs, using the variables \texttt{a} and \texttt{b} in as input arguments
+			\item \texttt{Clear} the variable \texttt{c} from your workspace, then rerun the function - why is the calculated variable \texttt{c} not in your workspace?
+			\item Finish the function by adding an output argument
+			\item Re-run your function with \texttt{c} as the output argument and \texttt{a} and \texttt{b} as the input arguments. Confirm that the output variable \texttt{c} is now in your workspace.
+			\item Re-run the function, this time specifying a variable \texttt{d} to contain the output and use 5 and 6 as the input variables
+			\item Add an \texttt{H1} line to your function so that it works with MATLAB's \texttt{help} and \texttt{lookfor} functions. Check that it does.
+		\end{enumerate}	
+	\end{enumerate}	
+	\subsection*{Also requires some use of MATLAB's help}
+	\begin{enumerate}[resume]
+		\item Structure arrays, assertions and nested functions
+		\begin{enumerate}
+			\item Check there are some .m files in your current working directory. There should at least be the .m file from question \ref{q:basicscript}. If you have only one or two .m files, create some more .m files using a text editor. The content doesn't matter; just make sure you have at least 5 files.
+			\item Read the help entry for the \texttt{dir} command, and try some of the examples given. Then write a script that creates a structure array, which contains information about all the files in your current directory with a .m file extension. Save your script with a suitable file name. Double click on the structure you have created and look at the contents.
+			\item Modify your script so that the file name and file size are printed to the screen if the file size is greater than 150 bytes. If the file is smaller than 150 bytes output text to indicate the file is very small.
+			\item Convert your script into a function which takes a string as an input argument to determine which file types are searched for. Give your function a descriptive name and call it from the command window, testing the results for different file types. Make sure your function works with \texttt{help} and \texttt{lookfor}.
+			\item Call your function using a file extension which won't match anything in your working directory (e.g. *.invalidextension). It should produce no output, but also no error message. Add an \texttt{assertion} to your function which halts execution if no files are matched, and gives a useful error message. 
+			\label{q:function_list_files}
+			\item Write a function which converts an input in bytes to an output in KB. Make sure your function works with \texttt{help} and \texttt{lookfor}.
+			\item Call this function from within your function from question \ref{q:function_list_files} and output the combined size of all .m files greater than 150 bytes.
+			\item Modify your function to take a second input argument which is the threshold in bytes. Run your function for different combinations of file extension and size threshold.
+			\item If you haven't already done so, write a comment above each line of code to explain what it does
+		\end{enumerate}
+	\end{enumerate}
+	
+	\section{Optimisation}
+		\subsection*{Based on the lesson}
+			\begin{enumerate}
+				\item Download \href{https://github.com/UoMResearchIT/MATLAB-online-exercises/raw/master/lesson5_programming/loopy.m}{this script} and save it in your current working directory. Run it in MATLAB and note how long it takes to run. 
+				
+				\item Use the profiler to examine which lines in the script take the most time. Now look at the script in the MATLAB editor and hover your mouse over the orange coloured lines in the MATLAB editor (on the right edge, beyond the scroll bar). Note the suggestions for improving efficiency.
+			\end{enumerate}	
+		
+		\subsection*{Requires use of MATLAB's help}
+		\begin{enumerate}[resume]
+			\item Decide how you will check that you don't introduce bugs when making changes to this code, then make the suggested modifications (adding semi-colons, pre-allocating arrays). Re-run the script and note how long it takes.
+			\item Investigate further improvements to the efficiency of this script -- hint: read the following sections of the MATLAB help:
+			\begin{enumerate}
+				\item MATLAB/Advanced Software Development/Performance and memory/Code performance/Concepts/Techniques for improving performance
+				\item MATLAB/Advanced Software Development/Performance and memory/Code performance/Concepts/Vectorization
+			\end{enumerate}
+			\item Test that you haven't introduced bugs into the optimised version of the code
+		\end{enumerate}
+\end{document}
