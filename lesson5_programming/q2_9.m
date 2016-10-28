@@ -1,5 +1,5 @@
 % 2.9
-% While loop to calculate first 10 numbers divisble by 3, 4, and 5.
+% While loop to calculate first 10 numbers divisible by 3, 4, and 5.
 
 % Counter to record how many numbers have met our criteria
 count=0;
