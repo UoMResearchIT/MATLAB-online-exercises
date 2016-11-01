@@ -39,8 +39,19 @@
 			\item \lstinline[style=Matlab-editor]![min_val,min_index]=min(m(:));[index_row,index_col]=ind2sub(size(m),min_index)!
 		% Hard	
 			\item \lstinline[style=Matlab-editor]!a=rand(500,1)!
-			\item \lstinline[style=Matlab-editor]!any(a>0.5), any(a>0.9), any(a>0.99)!
+			\item 
+				\begin{enumerate}
+					\item \lstinline[style=Matlab-editor]!any(a>0.5)!
+					\item \lstinline[style=Matlab-editor]!any(a>0.9)!
+					\item \lstinline[style=Matlab-editor]!any(a>0.99)!
+				\end{enumerate} 
 			\item \lstinline[style=Matlab-editor]!indices=find(a>0.99)!
-			\item \lstinline[style=Matlab-editor]!all(a>0.5), all(a>0.1), all(a>0.01)!
+			\item 
+				\begin{enumerate}
+					\item \lstinline[style=Matlab-editor]!all(a>0.5)!
+					\item \lstinline[style=Matlab-editor]!all(a>0.1)!
+					\item \lstinline[style=Matlab-editor]!all(a>0.01)!
+				\end{enumerate}
+			
 	\end{enumerate}
 \end{document}
