@@ -64,14 +64,15 @@
 	\section{Optimisation}
 		\subsection*{Based on the lesson}
 			\begin{enumerate}
-				\item Download \href{https://github.com/UoMResearchIT/MATLAB-online-exercises/raw/master/lesson6_mfiles/loopy.m}{this script} and save it in your current working directory. Run it in MATLAB and note how long it takes to run. 
+				\item Download \href{https://github.com/UoMResearchIT/MATLAB-online-exercises/raw/master/lesson6_mfiles/loopy.m}{this script} and save it in your current working directory. Run it in MATLAB and note that it takes a \textit{very} long time to run. Don't wait for it to finish - click in the command window, then press \texttt{ctrl + c} to abort execution.
 				
-				\item Use the profiler to examine which lines in the script take the most time. Now look at the script in the MATLAB editor and hover your mouse cursor over the orange coloured lines in the MATLAB editor (on the right edge, beyond the scroll bar). Read the suggestions for improving efficiency.
+				\item Now look at the script in the MATLAB editor and hover your mouse cursor over the orange coloured marks in the MATLAB editor (on the right edge, beyond the scroll bar). Read the suggestions for improving efficiency.
 			\end{enumerate}	
 		
 		\subsection*{Requires use of MATLAB's help}
 		\begin{enumerate}[resume]
-			\item Make the suggested modifications (adding semi-colons, pre-allocating arrays). Re-run the script and note how long it takes.
+			\item Make the suggested modifications (adding semi-colons, pre-allocating arrays) one at a time. Re-run the script and note how long it takes after making each modification. When you have made all of the suggested edits, it should be \textit{much} quicker.
+			\item Use the profiler to examine which lines in the script take the most time. 
 			\item Investigate further improvements to the efficiency of this script -- hint: read the following sections of the MATLAB help:
 			\begin{enumerate}
 				\item MATLAB/Advanced Software Development/Performance and memory/Code performance/Concepts/Techniques for improving performance
