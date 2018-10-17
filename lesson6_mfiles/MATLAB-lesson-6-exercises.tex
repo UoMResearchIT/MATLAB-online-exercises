@@ -37,7 +37,7 @@
 			\item Run your function. Why doesn't it work? (Look at the error message in the command window for clues. Refer back to the lesson on function m-files and think about variable scope.)
 			\item Modify the function so that it takes two input arguments
 			\item Confirm that your function runs, using the variables \texttt{a} and \texttt{b} in as input arguments
-			\item \texttt{Clear} the variable \texttt{c} from your workspace, then rerun the function - why is the calculated variable \texttt{c} not in your workspace?
+			\item \texttt{Clear} the variable \texttt{c} from your workspace, then rerun the function --- why is the calculated variable \texttt{c} not in your workspace?
 			\item Finish the function by adding an output argument
 			\item Re-run your function with \texttt{c} as the output argument and \texttt{a} and \texttt{b} as the input arguments. Confirm that the output variable \texttt{c} is now in your workspace.
 			\item Re-run the function, this time specifying a variable \texttt{d} to contain the output and use 5 and 6 as the input variables
@@ -52,11 +52,13 @@
 			\item Read the help entry for the \texttt{dir} command, and try some of the examples given. Then write a script that creates a structure array, which contains information about all the files in your current directory with a .m file extension. Save your script with a suitable file name. Double click on the structure you have created and look at the contents.
 			\item Modify your script so that the file name and file size are printed to the screen if the file size is greater than 150 bytes. If the file is smaller than 150 bytes output text to indicate the file is very small.
 			\item Convert your script into a function which takes a string as an input argument to determine which file types are searched for. Give your function a descriptive name and call it from the command window, testing the results for different file types. Make sure your function works with \texttt{help} and \texttt{lookfor}.
-			\item Call your function using a file extension which won't match anything in your working directory (e.g. *.invalidextension). It should produce no output, but also no error message. Add an \texttt{assertion} to your function which halts execution if no files are matched, and gives a useful error message. 
+			\item Call your list-files function using a file extension which won't match anything in your working directory (e.g. *.invalidextension).
+			It should produce no output, but also no error message.
+			\item Add an \texttt{assertion} to your list-files function which halts execution if no files are matched, and gives a useful error message. 
 			\label{q:function_list_files}
 			\item Write a function which converts an input in bytes to an output in KB. Make sure your function works with \texttt{help} and \texttt{lookfor}.
-			\item Call this function from within your function from question \ref{q:function_list_files} and output the combined size of all .m files greater than 150 bytes.
-			\item Modify your function to take a second input argument which is the threshold in bytes. Run your function for different combinations of file extension and size threshold.
+			\item Call this bytes-to-kilobytes function from within your list-files function from question \ref{q:function_list_files} and output the combined size of all .m files greater than 150 bytes.
+			\item Modify your list-files function to take a second input argument which is the threshold in bytes. Run your function for different combinations of file extension and size threshold.
 			\item If you haven't already done so, write a comment above each line of code to explain what it does
 		\end{enumerate}
 	\end{enumerate}
